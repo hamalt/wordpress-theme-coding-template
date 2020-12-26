@@ -1,6 +1,6 @@
 -
-  var title = '北映'
-  var description = '北映'
+  var title = 'Webサイト'
+  var description = 'Webサイト'
   var rootImg = './assets/images/'
   var commonImg = './assets/images/common/'
 
@@ -13,20 +13,7 @@ html(lang="ja")
     meta(name="format-detection", content="telephone=no,address=no,email=no")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
 
-    //- link(rel='stylesheet' href='//unpkg.com/swiper/swiper-bundle.min.css')
-    //- link(rel='stylesheet' href='//vjs.zencdn.net/7.8.2/video-js.min.css')
-    //- link(rel='stylesheet' href='//cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css')
-    //- link(rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
-    //- link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css")
-    //- link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css")
-
-    link(rel='stylesheet' href='assets/css/vendor/swiper-bundle.min.css')
-    link(rel='stylesheet' href='assets/css/vendor/video-js.min.css')
-    link(rel='stylesheet' href='assets/css/vendor/slick.css')
-    link(rel="stylesheet" href="assets/css/vendor/lightbox/css/lightbox.min.css")
-    link(rel="stylesheet" href="assets/css/vendor/jquery.mCustomScrollbar.min.css")
-
-    link(rel='stylesheet' href='assets/css/main.css?ver=1.695')
+    link(rel='stylesheet' href='assets/css/main.css?ver=0.1')
 
     block includeJs
 
@@ -36,57 +23,23 @@ html(lang="ja")
 
       main#main.main(data-scroll-section)
         block content
-        //- if title!=='404'
-        //-   include _productionFeeLink
-        //-   .frameOrnament.is-pc.font-josefin
-        //-     span HOKUEI Northern Films
 
       if title=='404'
         .errorBg
-          //- .errorBg--text 404
-          //- .errorBg--mount
+
       else
         include _footer
-        include _productionFeeLink
-        include _scrollProgressBar
-        .frameOrnament.is-pc.font-josefin
-          span HOKUEI Northern Films
-
-      include _globalMenu
-      include _preLoader
 
     block end_of_body
       script(src="//kit.fontawesome.com/2b5237d088.js" crossorigin="anonymous")
-      //- script(src="//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js")
-      //- script(src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js")
-      //- script(src="//cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js")
-      //- script(src="//unpkg.com/swiper/swiper-bundle.min.js")
-      //- script(src="//vjs.zencdn.net/7.8.2/video.min.js")
-
-      //- script(src="//cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js")
-      //- script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
-      //- script(src="//cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js")
-      //- script(src="//cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js")
-      //- script(src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js")
-      //- script(src="//cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js")
 
       script(src="assets/js/vendor/lottie.min.js")
       script(src="assets/js/vendor/jquery-3.4.0.min.js")
       script(src="assets/js/vendor/jquery.easing.min.js")
       script(src="assets/js/polyfill.js")
-      //- script(src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.4/polyfill.min.js", nomodule, crossorigin="anonymous")
-      //- script(src="assets/js/vendor/abortcontroller-polyfill-only.js")
-      //- script(src="//polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach%2CNodeList.prototype.forEach%2CArray.from%2CString.prototype.startsWith%2CObject.assign%2CArray.prototype.entries%2CObject.entries%2CObject.fromEntries%2CDocumentFragment.prototype.append%2CElement.prototype.append%2CPromise%2CPromise.prototype.finally%2CArray.prototype.includes%2Ces6%2CEvent%2CElement.prototype.matches%2Cfetch%2CElement.prototype.remove", crossorigin="anonymous")
+
       script(src="assets/js/vendor/svg4everybody.min.js")
-      script(src="assets/js/vendor/swiper-bundle.min.js")
-      script(src="assets/js/vendor/video.min.js")
-      script(src="assets/js/vendor/ScrollMagic.min.js")
-      script(src="assets/js/vendor/debug.addIndicators.min.js")
-      script(src="assets/js/vendor/slick.min.js")
-      script(src="assets/js/vendor/rellax.min.js")
       script(src="assets/js/vendor/picturefill.min.js")
-      script(src="assets/js/vendor/lightbox.min.js")
-      script(src="assets/js/vendor/jquery.mCustomScrollbar.concat.min.js")
 
       script svg4everybody();
       script(src="./assets/js/main.js?ver=1.3557")

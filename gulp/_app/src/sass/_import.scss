@@ -15,12 +15,6 @@
 @import "01_base/utility/_apend.scss";
 @import "01_base/utility/_state.scss";
 @import "01_base/parts/element/_img.scss";
-@import "01_base/parts/component/_c-scrollbar.scss";
-@import "01_base/parts/component/_glitch.scss";
-@import "01_base/parts/component/_lineArrow.scss";
-@import "01_base/parts/component/_linkButton.scss";
-@import "01_base/parts/component/_moveLine.scss";
-@import "01_base/parts/component/_pictureFrame.scss";
 // endinject
 
 /* ########################################################################### *
@@ -29,20 +23,9 @@
 // frame:inject
 @import "02_frame/_setting/_animation.scss";
 @import "02_frame/structure/_main.scss";
-@import "02_frame/block/footer/_footerMenu.scss";
 @import "02_frame/block/footer/_siteFooter.scss";
-@import "02_frame/block/globalMenu/_globalMenu.scss";
-@import "02_frame/block/header/_fixedBrandLogo.scss";
-@import "02_frame/block/header/_fixedGlobalMenu.scss";
-@import "02_frame/block/header/_fixedHeader.scss";
-@import "02_frame/block/header/_headerNavigation.scss";
 @import "02_frame/block/header/_siteHeader.scss";
 @import "02_frame/block/preload/_preloader.scss";
-@import "02_frame/parts/component/_brandLogo.scss";
-@import "02_frame/parts/component/_frameOrnament.scss";
-@import "02_frame/parts/component/_menuButton.scss";
-@import "02_frame/parts/component/_productionFeeLink.scss";
-@import "02_frame/parts/component/_scrollProgressBar.scss";
 @import "02_frame/block/site/_site.scss";
 @import "02_frame/structure/divider/_container.scss";
 // endinject
@@ -51,54 +34,8 @@
    # Layer.03 Contents
  * ########################################################################### */
 // contents:inject
-@import "03_contents/parts/_aboutSentence.scss";
-@import "03_contents/parts/_downloadContents.scss";
-@import "03_contents/parts/_memberBox.scss";
-@import "03_contents/parts/_messageBox.scss";
-@import "03_contents/parts/_newsWidget.scss";
-@import "03_contents/parts/_postsNav.scss";
-@import "03_contents/parts/_privacyPolicy.scss";
-@import "03_contents/parts/_serviceBox.scss";
-@import "03_contents/parts/_serviceLinkPanel.scss";
-@import "03_contents/parts/_socialLinks.scss";
-@import "03_contents/parts/_subscribeForm.scss";
-@import "03_contents/parts/_theContent.scss";
 @import "03_contents/parts/_wordpress.scss";
 @import "03_contents/parts/_wpcf7.scss";
-@import "03_contents/block/about/_aboutUsSection.scss";
-@import "03_contents/block/about/_heroHeader.scss";
-@import "03_contents/block/error/_errorBg.scss";
-@import "03_contents/block/error/_errorBody.scss";
-@import "03_contents/block/global/_aboutContactSection.scss";
-@import "03_contents/block/global/_contentsSection.scss";
-@import "03_contents/block/global/_pageBody.scss";
-@import "03_contents/block/global/_pageHeader.scss";
-@import "03_contents/block/global/_pageHeadline.scss";
-@import "03_contents/block/global/_pagination.scss";
-@import "03_contents/block/home/_aboutSection.scss";
-@import "03_contents/block/home/_contactSection.scss";
-@import "03_contents/block/home/_homeTopWrapper.scss";
-@import "03_contents/block/home/_mainVisual.scss";
-@import "03_contents/block/home/_newsBar.scss";
-@import "03_contents/block/home/_newsSection.scss";
-@import "03_contents/block/home/_projectSection.scss";
-@import "03_contents/block/home/_servicesSection.scss";
-@import "03_contents/block/home/_topSection.scss";
-@import "03_contents/block/home/_worksSection.scss";
-@import "03_contents/block/member/_memberCard.scss";
-@import "03_contents/block/member/_memberGallery.scss";
-@import "03_contents/block/member/_memberList.scss";
-@import "03_contents/block/news/_newsContents.scss";
-@import "03_contents/block/news/_newsList.scss";
-@import "03_contents/block/news/_otherNews.scss";
-@import "03_contents/block/works/_relatedWorks.scss";
-@import "03_contents/block/works/_worksContents.scss";
-@import "03_contents/block/works/_worksGallery.scss";
-@import "03_contents/block/works/_worksLink.scss";
-@import "03_contents/block/works/_worksList.scss";
-@import "03_contents/block/works/_worksTags.scss";
-@import "03_contents/block/works/_worksTaxInfo.scss";
-@import "03_contents/block/works/_worksVideo.scss";
 // endinject
 
 /* ########################################################################### *
