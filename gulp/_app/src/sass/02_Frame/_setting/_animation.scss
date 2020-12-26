@@ -1,0 +1,16 @@
+@for $i from 1 through 60 {
+  @include mq(md) {
+    [data-scroll][data-delay='#{$i * 50}'] {
+      transition-delay: #{$i * 50}ms;
+
+      &::after,
+      &::before {
+        transition-delay: #{$i * 50}ms;
+      }
+    }
+  }
+}
+
+[data-scroll="fadeInUp"] {
+  @include fadeInUp();
+}

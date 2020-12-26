@@ -1,0 +1,52 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  transition: opacity .5s ease-in-out;
+
+  &.is-loaded {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &.is-static {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--inner {
+    margin: 0;
+  }
+
+  &.is-animation &--inner {
+    position: absolute;
+  }
+
+  &.is-static &--inner {
+    position: relative;
+  }
+
+  &--inner,
+  #animLogo {
+    width: 102px;
+    height: 120px;
+  }
+
+  #animLogo,
+  #staticLoaderLogo {
+    display: none;
+  }
+
+  svg {
+    width: 102px !important;
+    height: 120px !important;
+    color: $black;
+    fill: currentColor;
+    backface-visibility: hidden;
+  }
+}

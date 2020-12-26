@@ -1,0 +1,198 @@
+.siteFooter {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: $black;
+
+  @include mq(md) {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  &--top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include mq(md) {
+      justify-content: space-between;
+    }
+  }
+
+  &--topLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--logo {
+    margin-right: 40px;
+
+    @include mq(md) {
+      margin-right: 0;
+    }
+
+    svg {
+      width: 70px;
+      height: 25px;
+      color: $white;
+      fill: currentColor;
+      transition: color $base-duration $base-timing;
+
+      @include mq(md) {
+        width: 292px;
+        height: 116px;
+      }
+    }
+
+    a {
+      display: block;
+
+      &:hover {
+        svg {
+          color: rgba($white, .65);
+        }
+      }
+    }
+  }
+
+  &--line {
+    display: none;
+    text-align: left;
+
+    @include mq(md) {
+      display: block;
+      margin-left: 40px;
+    }
+
+    @include mq(xl) {
+      margin-left: 93px;
+    }
+
+    img {
+      max-width: 150px;
+      transition: opacity $base-duration $base-timing;
+    }
+
+    &:hover {
+      img {
+        opacity: .65;
+      }
+    }
+
+    p {
+      margin: 22px 0 0;
+      font-size: rem(15);
+      color: $white;
+
+      @include tracking(50);
+      @include leading(20, 15);
+    }
+  }
+
+  &--sns {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+
+        @include mq(md) {
+          margin-right: 58px;
+        }
+      }
+    }
+
+    a {
+      font-size: rem(18);
+      color: $white;
+
+      &:hover {
+        color: rgba($white, .65);
+      }
+
+      @include mq(md) {
+        font-size: rem(26);
+      }
+    }
+  }
+
+  &--telNumber {
+    a {
+      font-size: rem(12);
+      color: $white;
+
+      @include leading(16, 12);
+    }
+
+    .fas {
+      margin-right: 5px;
+    }
+  }
+
+  &--bottom {
+    @include mq(md) {
+      margin-top: 55px;
+    }
+  }
+
+  &--menu {
+    display: none;
+
+    @include mq(md) {
+      display: block;
+    }
+
+    dl {
+      margin: 0;
+    }
+
+    dt {
+      margin-bottom: 15px;
+      font-size: rem(18);
+
+      @include tracking(50);
+      @include leading(24, 18);
+
+      a {
+        color: $white;
+      }
+    }
+
+    dd {
+      margin-bottom: 11px;
+      margin-left: 0;
+      font-size: rem(19);
+
+      @include tracking(50);
+      @include leading(26, 19);
+
+      a {
+        color: #9c9897;
+      }
+    }
+  }
+
+  &--copyright {
+    margin-top: 15px;
+
+    @include mq(md) {
+      margin-top: 58px;
+    }
+
+    p {
+      margin: 0;
+      font-size: rem(10);
+      color: $white;
+      text-align: center;
+
+      @include leading(13, 10);
+    }
+  }
+}

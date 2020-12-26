@@ -1,0 +1,77 @@
+html,
+body {
+  // height: 100%;
+  background-color: $white;
+}
+
+html {
+  font-family: $base-font-family;
+  font-size: root-font-size($base-font-size);
+  line-height: $base-line-height;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  cursor: auto;
+  visibility: hidden;
+
+  &.wf-active {
+    visibility: visible;
+  }
+}
+
+::-moz-focus-inner {
+  border: none;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $white;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  transition: $transition-list;
+
+  &:hover {
+    color: rgba($black, .65);
+  }
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin-top: $base-spacing;
+//   margin-bottom: $base-spacing;
+//   line-height: $base-line-height;
+
+//   &:first-child {
+//     margin-top: 0;
+//   }
+// }
+
+@each $headline,
+$scale in $headline-modular-scale {
+  #{$headline} {
+    font-size: modular-scale($scale, .8125rem, $minor-third);
+
+    @include mq(sm) {
+      font-size: modular-scale($scale, .875rem, $minor-third);
+    }
+
+    @include mq(md) {
+      font-size: modular-scale($scale, 1rem, $major-third);
+    }
+
+    //@include grid-media($lg-grid) {
+    //    font-size: modular-scale($scale, 1rem, $perfect-fourth);
+    //}
+  }
+}

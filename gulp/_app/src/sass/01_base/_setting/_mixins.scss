@@ -1,0 +1,79 @@
+/**
+htmlタグ用のルートフォントサイズを計算
+ */
+@function root-font-size($font-size: 16px) {
+  $default-percent: 100%;
+
+  @if $font-size==16px {
+    @return 100%;
+  }
+
+  @else {
+    @return ($font-size / 16px) * 100%;
+  }
+}
+
+@mixin root-font-size($font-size) {
+  font-size: root-font-size($font-size);
+}
+
+/**
+ピクセル数値をremに変換
+ */
+@function rem($px, $base: 16) {
+  @return $px / $base * 1rem;
+}
+
+/**
+行送り値とフォントサイズの数値からline-heightを計算
+ */
+@function leading($leading: 24, $font-size: 16) {
+  @return ($leading / $font-size);
+}
+
+@mixin leading($leading: 24, $font-size: 16) {
+  line-height: leading($leading, $font-size);
+}
+
+/**
+トラッキング値をletter-spacingに変換
+ */
+@function tracking($target: 0) {
+  @return ($target / 1000) * 1em;
+}
+
+@mixin tracking($target: 0) {
+  letter-spacing: tracking($target);
+}
+
+/**
+100vhをクロスブラウザ用に変換
+ */
+@function vh100() {
+  @return #{calc(100 * var(--vh, 1vh))};
+}
+
+@mixin vh100() {
+  height: 100vh;
+  height: vh100();
+}
+
+/**
+パーセンテージの計算
+ */
+// @function toPer($target: 0,) {
+//   @return ($target / 1000) * 1em;
+// }
+
+@function px2vw($size, $viewport: $vw-viewport) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+
+  @return $font;
+}
+
+@mixin responsive-fs($font-size) {
+  font-size: $font-size * 1px;
+  font-size: rem($font-size);
+  font-size: px2vw($font-size);
+}

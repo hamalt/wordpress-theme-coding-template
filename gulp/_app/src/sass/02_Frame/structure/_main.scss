@@ -1,0 +1,13 @@
+.main {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 60px;
+
+  @at-root body:not(.error404) & {
+    background-color: $white;
+  }
+
+  @include mq(md) {
+    padding-bottom: 220px;
+  }
+}

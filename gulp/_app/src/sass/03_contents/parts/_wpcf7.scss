@@ -1,0 +1,142 @@
+.wpcf7 {
+  .wpcfMessage {
+    &>* {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    font-size: rem(18);
+
+    @include tracking(90);
+    @include leading(24, 18);
+  }
+
+  p {
+    margin-top: 0;
+
+    &:not(:last-of-type) {
+      margin-bottom: 26px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  span {
+    display: block;
+    margin-top: 12px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 19px;
+    font-size: rem(16);
+    vertical-align: bottom;
+    border: solid 1px #707070;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+
+    &:not(.font-mincho) {
+      font-family: $base-font-family;
+    }
+  }
+
+  input[type="submit"],
+  button[type="submit"] {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:not(.font-mincho) {
+      font-family: $base-font-family;
+    }
+  }
+
+  .selectWrap {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: 0;
+  }
+
+  .selectWrap::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0px;
+    border-bottom: solid 2px $black;
+    border-right: solid 2px $black;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translate(0, -50%);
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  select {
+    position: relative;
+    z-index: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    background-color: $white;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  &-acceptance {
+    label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: #efefef;
+      cursor: pointer;
+      transition: $transition-list;
+
+      &:hover {
+        background-color: #e1e1e1;
+      }
+    }
+
+    input {
+      margin-right: 10px;
+    }
+
+    .wpcf7-list-item-label {
+      margin-top: 0;
+      font-size: rem(14);
+    }
+  }
+
+  span.wpcf7-list-item {
+    margin: 0;
+  }
+}
