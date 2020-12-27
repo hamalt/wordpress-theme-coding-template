@@ -38,7 +38,7 @@ a {
   transition: $transition-list;
 
   &:hover {
-    color: rgba($black, .65);
+    color: rgba($black, 0.65);
   }
 }
 
@@ -57,13 +57,12 @@ a {
 //   }
 // }
 
-@each $headline,
-$scale in $headline-modular-scale {
+@each $headline, $scale in $headline-modular-scale {
   #{$headline} {
-    font-size: modular-scale($scale, .8125rem, $minor-third);
+    font-size: modular-scale($scale, 0.8125rem, $minor-third);
 
     @include mq(sm) {
-      font-size: modular-scale($scale, .875rem, $minor-third);
+      font-size: modular-scale($scale, 0.875rem, $minor-third);
     }
 
     @include mq(md) {

@@ -82,12 +82,12 @@ export function stylelint() {
     }))
     .pipe(gulpStylelint({
       failAfterError: isProd,
-      reporters: [{
-        formatter: 'verbose',
-        console: true
-      }],
-      syntax: 'scss'
-    }));
+      reporters: [
+        {formatter: 'string', console: true}
+      ],
+      fix: true,
+    }))
+    .pipe(gulp.dest(config.rootSrc));
 }
 
 export const styles = gulp.series(sassInject, stylelint, sass);

@@ -1,49 +1,59 @@
 // ##### Bourbon & Global
-$base-duration: .3s;
+$base-duration: 0.3s;
 $base-timing: $ease-in-out-cubic;
 $transition-list: all $base-duration $base-timing;
 
-$bourbon: ("modular-scale-base": 1rem,
-  "modular-scale-ratio": $augmented-fourth,
+$bourbon: (
+  'modular-scale-base': 1rem,
+  'modular-scale-ratio': $augmented-fourth,
 );
 
-$font-stack-japanese-yu-gothic: ("游ゴシック",
-  "Myriad Pro",
-  Myriad,
-  "Lucida Grande",
-  "segoe UI",
-  "ヒラギノ角ゴ ProN W3",
-  "Hiragino Kaku Gothic ProN",
-  Meiryo,
-  Verdana,
-  Arial,
-  sans-serif);
+$font-stack-japanese-yu-gothic: (
+  '游ゴシック',
+  'Myriad Pro',
+  myriad,
+  'Lucida Grande',
+  'segoe UI',
+  'ヒラギノ角ゴ ProN W3',
+  'Hiragino Kaku Gothic ProN',
+  meiryo,
+  verdana,
+  arial,
+  sans-serif
+);
 
 $base-font-family: $font-stack-japanese-yu-gothic;
 $base-font-size: 16px;
 $small-font-size: 14px;
 $x-small-font-size: 13px;
 $base-line-height: 1.5;
-$headline-modular-scale: ("h1": 3,
-  "h2": 2,
-  "h3": 1,
-  "h4": 0,
-  "h5": -1,
-  "h6": -2);
+$headline-modular-scale: (
+  'h1': 3,
+  'h2': 2,
+  'h3': 1,
+  'h4': 0,
+  'h5': -1,
+  'h6': -2,
+);
 
 // ##### Sass MQ
 $mq-base-font-size: $base-font-size;
 $mq-media-type: screen;
 $mq-responsive: true;
-$mq-breakpoints: (sm: 375px,
+$mq-breakpoints: (
+  sm: 375px,
   pad: 768px,
   md: 1024px,
   lg: 1024px,
   xl: 1440px,
-  max: 1920px);
+  max: 1920px,
+);
 $mq-static-breakpoint: desktop;
 $mq-show-breakpoints: (sm, md, lg, xl);
-$hidpi: (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 2dppx);
+$hidpi: (-webkit-min-device-pixel-ratio: 2) and
+  (
+    min-resolution: 2dppx,
+  );
 
 // My Mixins Settings
 $vw-viewport: 1920;

@@ -1,6 +1,6 @@
 .wpcf7 {
   .wpcfMessage {
-    &>* {
+    & > * {
       &:first-child {
         margin-top: 0;
       }
@@ -36,9 +36,9 @@
     margin-top: 12px;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
   select,
   textarea {
     width: 100%;
@@ -56,8 +56,8 @@
     }
   }
 
-  input[type="submit"],
-  button[type="submit"] {
+  input[type='submit'],
+  button[type='submit'] {
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -82,7 +82,7 @@
     content: '';
     width: 6px;
     height: 6px;
-    border: 0px;
+    border: 0;
     border-bottom: solid 2px $black;
     border-right: solid 2px $black;
     -ms-transform: rotate(45deg);
