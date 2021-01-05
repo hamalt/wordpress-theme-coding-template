@@ -1,6 +1,6 @@
 @mixin fadeInUp($delay: 0s) {
   opacity: 0;
-  transition: all 0.8s ease-in-out;
+  transition: all .8s ease-in-out;
   transition-delay: $delay;
   transform: translate3d(0, 50px, 0);
 

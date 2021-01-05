@@ -1,11 +1,11 @@
 // ##### Bourbon & Global
-$base-duration: 0.3s;
+$base-duration: .3s;
 $base-timing: $ease-in-out-cubic;
 $transition-list: all $base-duration $base-timing;
 
 $bourbon: (
   'modular-scale-base': 1rem,
-  'modular-scale-ratio': $augmented-fourth,
+  'modular-scale-ratio': $augmented-fourth
 );
 
 $font-stack-japanese-yu-gothic: (
@@ -33,7 +33,7 @@ $headline-modular-scale: (
   'h3': 1,
   'h4': 0,
   'h5': -1,
-  'h6': -2,
+  'h6': -2
 );
 
 // ##### Sass MQ
@@ -46,13 +46,13 @@ $mq-breakpoints: (
   md: 1024px,
   lg: 1024px,
   xl: 1440px,
-  max: 1920px,
+  max: 1920px
 );
 $mq-static-breakpoint: desktop;
 $mq-show-breakpoints: (sm, md, lg, xl);
 $hidpi: (-webkit-min-device-pixel-ratio: 2) and
   (
-    min-resolution: 2dppx,
+    min-resolution: 2dppx
   );
 
 // My Mixins Settings
