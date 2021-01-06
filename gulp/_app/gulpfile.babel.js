@@ -57,7 +57,7 @@ function watchFiles() {
  */
 export const dev = series(
   clean,
-  parallel(styles, templates, images, svgSprite),
+  parallel(styles, templates, scripts, images, svgSprite),
   serve,
   watchFiles
 );
@@ -67,7 +67,7 @@ export const dev = series(
  */
 export const build = series(
   clean,
-  parallel(styles, templates, scripts, images)
+  parallel(styles, templates, scripts, images, svgSprite)
 );
 
 /**

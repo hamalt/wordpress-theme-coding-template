@@ -15,8 +15,8 @@ export const sass = {
 };
 
 export const scripts = {
-  srcRoot: `${ASSET_ROOT}/js`,
-  src: `${ASSET_ROOT}/js/**/*.js`,
+  srcRoot: `${ASSET_ROOT}/scripts`,
+  src: `${ASSET_ROOT}/scripts/**/*.js`,
   dest: `${ASSET_DEST_ROOT}/js`,
   babelrc: {
     presets: [

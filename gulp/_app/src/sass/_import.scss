@@ -21,14 +21,14 @@
    # Layer.02 Frame
  * ########################################################################### */
 // frame:inject
-@import '02_frame/structure/_main.scss';
 @import '02_frame/_setting/_animation.scss';
-@import '02_frame/structure/divider/_container.scss';
+@import '02_frame/structure/_main.scss';
 @import '02_frame/block/footer/_copyright.scss';
 @import '02_frame/block/footer/_siteFooter.scss';
 @import '02_frame/block/header/_siteHeader.scss';
 @import '02_frame/block/preload/_preloader.scss';
 @import '02_frame/block/site/_site.scss';
+@import '02_frame/structure/divider/_container.scss';
 // endinject
 
 /* ########################################################################### *

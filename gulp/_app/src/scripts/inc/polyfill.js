@@ -1,6 +1,7 @@
 // 主にIE11用のプログラムコード。
 // 読み込ませないとプログラムがIE11で動かない
 
+export default function() {
 if (typeof Object.assign != 'function') {
   Object.assign = function (target) {
     'use strict';
@@ -85,4 +86,6 @@ if (!String.prototype.repeat) {
     str += str.substring(0, maxCount - str.length);
     return str;
   }
+}
+
 }
