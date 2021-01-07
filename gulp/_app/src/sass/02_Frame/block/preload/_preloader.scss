@@ -23,18 +23,18 @@
     margin: 0;
   }
 
+  &--inner,
+  #animLogo {
+    width: 102px;
+    height: 120px;
+  }
+
   &.is-animation &--inner {
     position: absolute;
   }
 
   &.is-static &--inner {
     position: relative;
-  }
-
-  &--inner,
-  #animLogo {
-    width: 102px;
-    height: 120px;
   }
 
   #animLogo,
