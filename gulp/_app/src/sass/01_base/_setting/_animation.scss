@@ -4,7 +4,7 @@
   transition-delay: $delay;
   transform: translate3d(0, 50px, 0);
 
-  &.is-inview {
+  &.js-is-inview {
     opacity: 1;
     transform: none;
   }
