@@ -18,6 +18,7 @@ export const scripts = {
   srcRoot: `${ASSET_ROOT}/scripts`,
   src: `${ASSET_ROOT}/scripts/**/*.js`,
   dest: `${ASSET_DEST_ROOT}/js`,
+  themeDest: `${THEME_ASSET_DEST_ROOT}/js`,
   babelrc: {
     presets: [
       ['@babel/env', {
