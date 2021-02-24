@@ -6,16 +6,17 @@ body {
 
 html {
   font-family: $base-font-family;
-  font-size: root-font-size($base-font-size);
   line-height: $base-line-height;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   cursor: auto;
-  visibility: hidden;
+  visibility: visible;
 
   &.wf-active {
     visibility: visible;
   }
+
+  @include root-font-size($base-font-size);
 }
 
 ::-moz-focus-inner {

@@ -46,7 +46,8 @@ export const images = {
 
 export const svg = {
   src: `${ASSET_ROOT}/images/svg-sprite/**/*.svg`,
-  dest: `${ASSET_DEST_ROOT}/images/svg-sprite`
+  dest: `${ASSET_DEST_ROOT}/images/svg-sprite`,
+  themeDest: `${THEME_ASSET_DEST_ROOT}/images/svg-sprite`,
 };
 
 export const isProd = process.env.NODE_ENV === 'production';

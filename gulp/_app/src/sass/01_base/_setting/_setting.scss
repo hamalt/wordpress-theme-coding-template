@@ -36,25 +36,25 @@ $headline-modular-scale: (
   'h6': -2
 );
 
+// My Mixins Settings
+$vw-viewport: 1920;
+$vw-enable: true;
+
 // ##### Sass MQ
 $mq-base-font-size: $base-font-size;
 $mq-media-type: screen;
 $mq-responsive: true;
 $mq-breakpoints: (
   sm: 375px,
-  pad: 768px,
-  md: 1024px,
+  md: 768px,
   lg: 1024px,
   xl: 1440px,
-  max: 1920px
+  mx: 1920px
 );
 $mq-static-breakpoint: desktop;
-$mq-show-breakpoints: (sm, md, lg, xl);
+$mq-show-breakpoints: (sm, md, lg, xl, mx);
 $hidpi: (-webkit-min-device-pixel-ratio: 2) and
   (
     min-resolution: 2dppx
   );
 
-// My Mixins Settings
-$vw-viewport: 1920;
-$vw-enable: true;

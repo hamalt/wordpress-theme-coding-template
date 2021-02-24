@@ -1,4 +1,15 @@
 /**
+変数の単位を削除
+ */
+@function strip-unit($number) {
+  @if type-of($number)=='number'and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+/**
 htmlタグ用のルートフォントサイズを計算
  */
 @function root-font-size($font-size: 16px) {
@@ -6,20 +17,28 @@ htmlタグ用のルートフォントサイズを計算
 
   @if $font-size==16px {
     @return 100%;
-  } @else {
+  }
+
+  @else {
     @return ($font-size / 16px) * 100%;
   }
 }
 
 @mixin root-font-size($font-size) {
-  font-size: root-font-size($font-size);
+  font-size: $font-size;
+
+  @include mq(mx) {
+    $max-size: map-get($mq-breakpoints, 'mx');
+
+    font-size: (($mq-base-font-size / $max-size) * 100) * 1vw;
+  }
 }
 
 /**
 ピクセル数値をremに変換
  */
-@function rem($px, $base: 16) {
-  @return $px / $base * 1rem;
+@function rem($px, $base: $base-font-size) {
+  @return $px / strip-unit($base) * 1rem;
 }
 
 /**
@@ -70,8 +89,19 @@ htmlタグ用のルートフォントサイズを計算
   @return $font;
 }
 
+/**
+レスポンシブ（4K対応）を考慮したフォントサイズの出力
+ */
+// TODO: ipadやiphoneなどを考慮し、第３，第２引数も指定した場合に出力するよう変更
 @mixin responsive-fs($font-size) {
   font-size: $font-size * 1px;
   font-size: rem($font-size);
-  font-size: px2vw($font-size);
+
+  @include mq(md) {
+    font-size: rem($font-size);
+  }
+
+  @include mq(mx) {
+    font-size: px2vw($font-size);
+  }
 }

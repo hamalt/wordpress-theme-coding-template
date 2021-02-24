@@ -10,6 +10,8 @@ import smoothScroll from './inc/smoothScroll.js';
 import webFont from './inc/webFont.js';
 import scrollFire from './inc/scrollFire.js';
 import touchDevice from './inc/touchDevice.js';
+import mainVisual from './inc/mainVisual.js';
+import swiperjs from './inc/swiper.js';
 
 // IEを判定してbodyタグにclass付与
 detectIEforBodyClass();
@@ -25,6 +27,11 @@ scrollFire();
 
 // タッチデバイス対応（ホバー挙動の再現など）
 touchDevice();
+
+// メインビジュアル動画
+mainVisual();
+
+swiperjs();
 
 /**
  * 100vh用のCSS変数

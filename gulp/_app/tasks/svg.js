@@ -18,8 +18,9 @@ export function svgSprite() {
     .src(config.src)
     .pipe(plumber())
     .pipe(gulpSvgSprite(spriteConfig))
-    .on('error', function(error) {
+    .on('error', function (error) {
       console.log(error);
     })
-    .pipe(gulp.dest(config.dest));
+    .pipe(gulp.dest(config.dest))
+    .pipe(gulp.dest(config.themeDest));
 }

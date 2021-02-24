@@ -2,22 +2,25 @@ export default function smoothScroll() {
 /**
  * Smooth Scroll
  */
-(function ($) {
-  $('a[href^="#"]').on('click', function () {
-    var speed = 500;
-    var href = $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top - $("#siteHeader").innerHeight();
+  (function ($) {
+    // 発火しないaタグを指定（カンマ区切り）
+    var notList = '.close-search a, .search-item a, .woocommerce-tabs a, .generate-back-to-top';
 
-    if ($('body').hasClass('admin-bar')) {
-      position -= $('#wpadminbar').innerHeight();
-    }
+    $('a[href^="#"]').not(notList).on('click', function () {
+      var speed = 500;
+      var href = $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top - $("#siteHeader").innerHeight();
 
-    $("html, body").animate({
-      scrollTop: position
-    }, speed, "swing");
-    return false;
-  });
+      if ($('body').hasClass('admin-bar')) {
+        position -= $('#wpadminbar').innerHeight();
+      }
+
+      $("html, body").animate({
+        scrollTop: position
+      }, speed, "swing");
+      return false;
+    });
 
   /**
    * ページローディング時のSmooth Scroll処理
