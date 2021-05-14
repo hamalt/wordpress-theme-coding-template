@@ -52,12 +52,19 @@ gulp/
 
 cdコマンドで`_app/`ディレクトリに移動します。
 ```
-cd /gulp/_app/
+cd gulp/_app/
 ```
 
 一番最初に以下のコマンドでNode.jsのモジュールをインストールしてください。`gulp/_app/node_modules/`ディレクトリが作成されて中にプログラムがインストールされます。（既にnode_modulesディレクトリがある場合は実行不要です）
+
+Yarnがインストールされている場合：
 ```
 npm run setup:yarn
+```
+
+Yarnがインストールされていない場合：
+```
+npm run setup:npm
 ```
 
 以下コマンドを実行すると、自動的に[http://localhost:3000/](http://localhost:3000/)が開かれて開発環境が閲覧できます。
