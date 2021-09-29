@@ -48,12 +48,12 @@ function updateViewport() {
   var root = document.documentElement;
 
   // 各カスタムプロパティに`window.innerHeight / 100`,`window.innerWidth / 100`の値をセット
-  root.style.setProperty('--vh', vh + 'px')
+  root.style.setProperty('--vh', vh + 'px');
   if (vh > vw) {
-    root.style.setProperty('--vmax', vh + 'px')
-    root.style.setProperty('--vmin', vw + 'px')
+    root.style.setProperty('--vmax', vh + 'px');
+    root.style.setProperty('--vmin', vw + 'px');
   } else {
-    root.style.setProperty('--vmax', vw + 'px')
-    root.style.setProperty('--vmin', vh + 'px')
+    root.style.setProperty('--vmax', vw + 'px');
+    root.style.setProperty('--vmin', vh + 'px');
   }
 };

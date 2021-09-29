@@ -3,7 +3,7 @@
 /* ########################################################################### *
    # Layer.01 Base
  * ########################################################################### */
-@import '01_base/vender/_sanitize.scss';
+@use '01_base/vender/_sanitize.scss';
 @import '01_base/vender/_bourbon.scss';
 @import '01_base/vender/_mq.scss';
 @import '01_base/_setting/_animation.scss';
@@ -12,38 +12,38 @@
 @import '01_base/_setting/_mixins.scss';
 @import '01_base/_setting/_typography.scss';
 // base:inject
-@import '01_base/utility/_apend.scss';
-@import '01_base/utility/_state.scss';
-@import '01_base/parts/element/_img.scss';
+@import "01_base/utility/_apend.scss";
+@import "01_base/utility/_state.scss";
+@import "01_base/parts/element/_img.scss";
 // endinject
 
 /* ########################################################################### *
    # Layer.02 Frame
  * ########################################################################### */
 // frame:inject
-@import '02_frame/_setting/_animation.scss';
-@import '02_frame/structure/_main.scss';
-@import '02_frame/block/header/_siteHeader.scss';
-@import '02_frame/block/footer/_copyright.scss';
-@import '02_frame/block/footer/_siteFooter.scss';
-@import '02_frame/block/site/_site.scss';
-@import '02_frame/block/preload/_preloader.scss';
-@import '02_frame/structure/divider/_container.scss';
+@import "02_frame/_setting/_animation.scss";
+@import "02_frame/structure/_main.scss";
+@import "02_frame/block/footer/_copyright.scss";
+@import "02_frame/block/footer/_siteFooter.scss";
+@import "02_frame/block/header/_siteHeader.scss";
+@import "02_frame/block/site/_site.scss";
+@import "02_frame/block/preload/_preloader.scss";
+@import "02_frame/structure/divider/_container.scss";
 // endinject
 
 /* ########################################################################### *
    # Layer.03 Contents
  * ########################################################################### */
 // contents:inject
-@import '03_contents/parts/_wordpress.scss';
-@import '03_contents/parts/_wpcf7.scss';
+@import "03_contents/parts/_wordpress.scss";
+@import "03_contents/parts/_wpcf7.scss";
 // endinject
 
 /* ########################################################################### *
    # Layer.02 Pages
  * ########################################################################### */
 // pages:inject
-@import '04_pages/_contents.scss';
-@import '04_pages/_frame.scss';
-@import '04_pages/_print.scss';
+@import "04_pages/_contents.scss";
+@import "04_pages/_frame.scss";
+@import "04_pages/_print.scss";
 // endinject

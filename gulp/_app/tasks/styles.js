@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import gulpSass from 'gulp-sass';
+import sassCompiler from 'sass';
 import sourcemaps from 'gulp-sourcemaps';
 import cleancss from 'gulp-clean-css';
 import gcmq from 'gulp-group-css-media-queries';
@@ -14,6 +15,8 @@ import {
   sass as config,
   isProd
 } from './config';
+
+gulpSass.compiler = sassCompiler;
 
 /**
  * Import Sass partial file.
