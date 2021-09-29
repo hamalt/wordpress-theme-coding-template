@@ -12,7 +12,7 @@ export default function detectIEforBodyClass() {
   if (isIE) {
 
     // IEのバージョンを、正規表現で取得する.
-    var array = /(msie|rv:?)\s?([\d\.]+)/.exec(ua);
+    var array = /(msie|rv:?)\s?([\d.]+)/.exec(ua);
     var version = (array) ? array[2] : '';
 
     // バージョンを整数の形式にする（11.0 -> 11）

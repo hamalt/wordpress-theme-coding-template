@@ -56,4 +56,4 @@ function updateViewport() {
     root.style.setProperty('--vmax', vw + 'px');
     root.style.setProperty('--vmin', vh + 'px');
   }
-};
+}

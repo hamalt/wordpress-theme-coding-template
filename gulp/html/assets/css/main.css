@@ -770,6 +770,21 @@ img {
 /* ########################################################################### *
    # Layer.02 Frame
  * ########################################################################### */
+.main {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 60px;
+}
+body:not(.error404) .main {
+  background-color: white;
+}
+
+@media screen and (min-width: 48em) {
+  .main {
+    padding-bottom: 220px;
+  }
+}
+
 @media screen and (min-width: 48em) {
   [data-scroll][data-delay="50"] {
     transition-delay: 50ms;
@@ -1259,21 +1274,6 @@ img {
 [data-scroll=fadeInUp].js-is-inview {
   opacity: 1;
   transform: none;
-}
-
-.main {
-  position: relative;
-  z-index: 2;
-  padding-bottom: 60px;
-}
-body:not(.error404) .main {
-  background-color: white;
-}
-
-@media screen and (min-width: 48em) {
-  .main {
-    padding-bottom: 220px;
-  }
 }
 
 .copyright {
