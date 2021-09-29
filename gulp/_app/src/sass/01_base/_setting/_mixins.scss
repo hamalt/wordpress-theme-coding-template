@@ -2,7 +2,7 @@
 変数の単位を削除
  */
 @function strip-unit($number) {
-  @if type-of($number)=='number'and not unitless($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }
 
@@ -17,9 +17,7 @@ htmlタグ用のルートフォントサイズを計算
 
   @if $font-size==16px {
     @return 100%;
-  }
-
-  @else {
+  } @else {
     @return ($font-size / 16px) * 100%;
   }
 }

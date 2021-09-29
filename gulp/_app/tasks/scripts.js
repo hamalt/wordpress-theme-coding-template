@@ -13,7 +13,7 @@ export function esTranspile() {
     .src(config.src)
     .pipe(plumber())
     .pipe(gulpWebpack(require('../webpack.config.js'), webpack))
-    .pipe(gulp.dest(config.dest)),
+    .pipe(gulp.dest(config.dest))
     .pipe(gulp.dest(config.themeDest));
 }
 
