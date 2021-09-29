@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use 'sass:math';
 
 /// Increments up or down a defined scale and returns an adjusted value. This
 /// helps establish consistent measurements and spacial relationships throughout
@@ -106,11 +107,11 @@
     }
 
     @for $i from $increment through -1 {
-      @if $double-stranded and ($v1 / $ratio) < $v2 {
+      @if $double-stranded and math.div($v1, $ratio) < $v2 {
         $value: $v2;
-        $v2: ($v2 / $ratio);
+        $v2: math.div($v2, $ratio);
       } @else {
-        $v1: ($v1 / $ratio);
+        $v1: math.div($v1, $ratio);
         $value: $v1;
       }
     }

@@ -1,5 +1,5 @@
 import { scripts as config } from './tasks/config';
-const path = require('path');
+import path from 'path';
 
 module.exports = {
   mode: process.env.NODE_ENV ? 'production' : 'development',
@@ -14,7 +14,7 @@ module.exports = {
     modules: [path.resolve('./node_modules')],
   },
   // 以下1行の設定でIE11に対応
-  target: ['es5'],
+  target: ['web', 'es5'],
   optimization: {
     minimize: false
   },

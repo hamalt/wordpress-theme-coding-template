@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import gulpSass from 'gulp-sass';
+import gulpSassLib from 'gulp-sass';
 import sassCompiler from 'sass';
 import sourcemaps from 'gulp-sourcemaps';
 import cleancss from 'gulp-clean-css';
@@ -16,7 +16,8 @@ import {
   isProd
 } from './config';
 
-gulpSass.compiler = sassCompiler;
+// コンパイラをDart Sassに設定
+const gulpSass = gulpSassLib(sassCompiler);
 
 /**
  * Import Sass partial file.
