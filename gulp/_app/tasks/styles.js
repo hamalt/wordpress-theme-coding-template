@@ -10,6 +10,7 @@ import plumber from 'gulp-plumber';
 import gulpStylelint from 'gulp-stylelint';
 import inject from 'gulp-inject';
 import changed from 'gulp-changed-in-place';
+import sassGlob from 'gulp-sass-glob-use-forward';
 
 import {
   sass as config,
@@ -64,12 +65,15 @@ export function sass() {
   return gulp
     .src(config.src)
     .pipe(plumber())
+    .pipe(sassGlob())
     .pipe(sourcemaps.init())
-    .pipe(gulpSass().on('error', gulpSass.logError))
+    .pipe(gulpSass.sync({
+      outputStyle: "expanded"
+    }).on('error', gulpSass.logError))
     // .pipe(gcmq())
     // .pipe(autoprefixer())
     // .pipe(csscomb())
-    .pipe(cleancss())
+    // .pipe(cleancss())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.dest))
     .pipe(gulp.dest(config.themeDest));
