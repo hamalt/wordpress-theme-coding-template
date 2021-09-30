@@ -68,12 +68,12 @@ export function sass() {
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(gulpSass.sync({
-      outputStyle: "expanded"
+      outputStyle: 'expanded'
     }).on('error', gulpSass.logError))
     // .pipe(gcmq())
     // .pipe(autoprefixer())
     // .pipe(csscomb())
-    // .pipe(cleancss())
+    .pipe(cleancss())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.dest))
     .pipe(gulp.dest(config.themeDest));

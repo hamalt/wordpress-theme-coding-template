@@ -3,7 +3,7 @@ export default function () {
    * Web Font Loader
    */
   (function ($) {
-    if ($("body").hasClass("notfound")) {
+    if ($('body').hasClass('notfound')) {
       window.WebFontConfig = {
         google: {
           families: ['Josefin+Sans:wght@400;700', 'Passion+One']

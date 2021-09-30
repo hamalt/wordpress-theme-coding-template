@@ -10,8 +10,8 @@ module.exports = function (api) {
         },
         useBuiltIns: 'usage',
         corejs: {
-          "version": 3,
-          "proposals": true
+          'version': 3,
+          'proposals': true
         }
       }
     ]

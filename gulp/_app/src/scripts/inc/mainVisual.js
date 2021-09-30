@@ -1,10 +1,12 @@
 export default function mainVisual() {
-/**
- * Smooth Scroll
- */
-  (function ($) {
-    var options = {
-      // aspectRatio: '16:9',
+  /**
+   * Smooth Scroll
+   */
+  (function () {
+    let overrideNative = true;
+
+    let options = {
+    // aspectRatio: '16:9',
       fill: true,
       muted: true,
       preload: true,
@@ -28,11 +30,8 @@ export default function mainVisual() {
 
     // Video 1
     var mainVisualPlayer1 = videojs('mainVisualVideo1', options, function () {
-      refleshScrollMagicScenes();
-      rellax.refresh();
-      setScrollLimit();
       return false;
     });
-  })(jQuery);
+  })();
 
 }
