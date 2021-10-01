@@ -28,6 +28,13 @@ export const scripts = {
   }
 };
 
+export const ts = {
+  srcRoot: `${ASSET_ROOT}/ts`,
+  src: `${ASSET_ROOT}/ts/**/*.ts`,
+  dest: `${ASSET_DEST_ROOT}/js`,
+  themeDest: `${THEME_ASSET_DEST_ROOT}/js`,
+};
+
 export const templates = {
   root: `${ASSET_ROOT}/templates`,
   edges: `${ASSET_ROOT}/templates/**/*.edge`,

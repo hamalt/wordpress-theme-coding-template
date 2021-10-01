@@ -17,6 +17,9 @@ import {
   scripts
 } from './tasks/scripts';
 import {
+  ts
+} from './tasks/ts';
+import {
   templates
 } from './tasks/templates';
 import {
@@ -32,6 +35,7 @@ import {
 import {
   sass as sassConfig,
   scripts as jsConfig,
+  ts as tsConfig,
   images as imagesConfig,
   templates as templatesConfig
 } from './tasks/config';
@@ -48,6 +52,8 @@ function watchFiles() {
   );
   // JavaScript
   watch(jsConfig.src, series(scripts, reload));
+  // TypeScript
+  watch(tsConfig.src, series(ts, reload));
   // Images
   watch(imagesConfig.src, series(images, reload));
 }
@@ -57,7 +63,7 @@ function watchFiles() {
  */
 export const dev = series(
   clean,
-  parallel(styles, templates, scripts, images, svgSprite),
+  parallel(styles, templates, scripts, images, svgSprite, ts),
   serve,
   watchFiles
 );
@@ -67,7 +73,7 @@ export const dev = series(
  */
 export const build = series(
   clean,
-  parallel(styles, templates, scripts, images, svgSprite)
+  parallel(styles, templates, scripts, images, svgSprite, ts)
 );
 
 /**
