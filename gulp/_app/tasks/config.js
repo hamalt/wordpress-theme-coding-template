@@ -30,7 +30,7 @@ export const scripts = {
 
 export const ts = {
   srcRoot: `${ASSET_ROOT}/ts`,
-  src: `${ASSET_ROOT}/ts/**/*.ts`,
+  src: `${ASSET_ROOT}/ts/main.ts`,
   dest: `${ASSET_DEST_ROOT}/js`,
   themeDest: `${THEME_ASSET_DEST_ROOT}/js`,
 };

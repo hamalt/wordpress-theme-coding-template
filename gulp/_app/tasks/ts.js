@@ -8,7 +8,7 @@ const tsProject = gulpTs.createProject('tsconfig.json');
 
 export function typeScript() {
   return tsProject
-    .src(config.src)
+    .src()
     .pipe(plumber())
     .pipe(tsProject())
     .js.pipe(gulp.dest(config.dest));
