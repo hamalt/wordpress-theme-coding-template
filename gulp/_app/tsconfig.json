@@ -1,9 +1,9 @@
 {
-  "files": ["src/ts/main.ts"],
+  "files": ["src/ts/main.ts", "src/ts/Todo.ts"],
   "compilerOptions": {
     /* Language and Environment */
     "target": "es5",
-    "module": "commonjs",
+    "module": "es2015",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

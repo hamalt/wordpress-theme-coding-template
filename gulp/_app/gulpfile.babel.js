@@ -17,7 +17,9 @@ import {
   scripts
 } from './tasks/scripts';
 import {
-  ts
+  ts,
+  watchedBrowserify,
+  fancyLog
 } from './tasks/ts';
 import {
   templates
@@ -46,14 +48,20 @@ import {
 function watchFiles() {
   // Sass
   watch([sassConfig.src, `!${sassConfig.ignoreWatchSrc}`], series(styles, reload));
+
   // Templates
   watch(templatesConfig.pugs,
     series(templates, reload)
   );
+
   // JavaScript
   watch(jsConfig.src, series(scripts, reload));
+
   // TypeScript
-  watch(tsConfig.src, series(ts, reload));
+  // watch(tsConfig.src, series(ts, reload));
+  watchedBrowserify.on('update', ts);
+  watchedBrowserify.on('log', fancyLog);
+
   // Images
   watch(imagesConfig.src, series(images, reload));
 }

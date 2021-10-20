@@ -5,21 +5,21 @@ module.exports = function (api) {
     [
       '@babel/preset-env',
       {
-        targets: {
-          ie: '11'
-        },
-        useBuiltIns: 'usage',
-        corejs: {
-          'version': 3,
-          'proposals': true
-        }
+        // targets: {
+        //   ie: '11'
+        // },
+        // useBuiltIns: 'usage',
+        // corejs: {
+        //   'version': 3,
+        //   'proposals': true
+        // }
       }
     ]
   ];
 
   const plugins = [
     // Sample
-    // "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-object-rest-spread",
     // '@babel/plugin-transform-arrow-functions',
   ];
 
