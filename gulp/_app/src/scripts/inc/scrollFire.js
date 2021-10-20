@@ -25,7 +25,7 @@ export default function () {
     // 参考: https://scrollmagic.io/examples/basic/reveal_on_scroll.html
     $('[data-scroll]').each(function () {
       // クラス名で処理を変更するために値を取得
-      var attrClass = $(this).attr("class");
+      var attrClass = $(this).attr('class');
 
       // トリガーとなるブラウザ下部からの距離（0.9 = 90%）
       var triggerHookValue = 1;
@@ -39,17 +39,17 @@ export default function () {
 
       // ScrollMagic用のシーンを生成
       var scene = new ScrollMagic.Scene({
-          triggerElement: this,
-          triggerHook: triggerHookValue,
-          duration: durationValue,
-          offset: offsetValue,
-          reverse: true
-        })
-        .on("enter", function (e) {
+        triggerElement: this,
+        triggerHook: triggerHookValue,
+        duration: durationValue,
+        offset: offsetValue,
+        reverse: true
+      })
+        .on('enter', function (e) {
           // 要素表示時
-          $(e.target.triggerElement()).addClass("js-is-inview");
+          $(e.target.triggerElement()).addClass('js-is-inview');
         })
-        .on("leave", function (e) {
+        .on('leave', function () {
           // 要素非表示時
         })
         // デバッグ時にコメントアウトを解除
@@ -67,6 +67,9 @@ export default function () {
       for (var i = 0; i < scrollMagicScenes.length; i++) {
         scrollMagicScenes[i].refresh();
       }
-    }
+    };
+
+    // 高さ再計算関数の実行
+    refleshScrollMagicScenes();
   })(jQuery);
 }
