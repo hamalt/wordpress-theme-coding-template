@@ -1,0 +1,13 @@
+{
+  "files": ["src/ts/index.ts"],
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es5",
+    "module": "es2015",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  }
+}

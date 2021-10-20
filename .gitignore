@@ -8,6 +8,7 @@ npm-debug.log
 
 # Build distribution
 bundle.js
+bundle.js.map
 
 # Composer
 /vendor/
