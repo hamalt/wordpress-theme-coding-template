@@ -32,6 +32,7 @@ export const ts = {
   srcRoot: `${ASSET_ROOT}/ts`,
   src: `${ASSET_ROOT}/ts/index.ts`,
   dest: `${ASSET_DEST_ROOT}/js`,
+  destFile: `${ASSET_DEST_ROOT}/js/bundle.js`,
   themeDest: `${THEME_ASSET_DEST_ROOT}/js`,
 };
 

@@ -61,6 +61,7 @@ function watchFiles() {
   // watch(tsConfig.src, series(ts, reload));
   watchedBrowserify.on('update', ts);
   watchedBrowserify.on('log', fancyLog);
+  watch(tsConfig.destFile, reload);
 
   // Images
   watch(imagesConfig.src, series(images, reload));
